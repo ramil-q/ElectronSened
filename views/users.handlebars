@@ -1,0 +1,43 @@
+<div class="container">
+    <form action="" method="post">
+        <label for="sirket" style="display: block;">Axtarmaq istediyiniz sirketin adini daxil edin.</label>
+        <input type="text" name="company" id="sirket" placeholder="Sirketin adini daxil edin">
+        <button>Axtar</button>
+    </form>
+    {{!-- {{#if companies}}
+    <select name="" id="">
+        {{#each companies}}
+        <option value="{{this.id}}">{{this.name}}</option>
+        {{/each}}
+    </select>
+    {{/if}} --}}
+    {{#if q}}
+    {{!-- <ul>
+        {{#each q}}
+        <li>{{this.firstname}}</li>
+        {{/each}}
+    </ul> --}}
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Surname</th>
+                <th scope="col">Position</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+                {{#each q}}
+            <tr>
+                <td>{{this.firstname}}</td>
+                <td>{{this.lastname}}</td>
+                <td>{{this.position}}</td>
+                <td>{{this.email}}</td>
+            </tr>
+                {{/each}}
+
+        </tbody>
+    </table>
+    {{/if}}
+
+</div>
